@@ -11,6 +11,8 @@ import ARKit
 
 class ARSceneManager: NSObject {
     
+    private var planes = [UUID: Plane]()
+    
     weak var sceneView: ARSCNView?
     
     func attach(to sceneView: ARSCNView) {
@@ -43,6 +45,25 @@ extension ARSceneManager: ARSCNViewDelegate {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         
         print("Found plane: \(planeAnchor)")
+        
+        let plane = Plane(anchor: planeAnchor)
+        
+        // store a local reference to the plane
+        planes[anchor.identifier] = plane
+        
+        node.addChildNode(plane)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        
+        if let plane = planes[planeAnchor.identifier] {
+            plane.updateWith(anchor: planeAnchor)
+        }
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
+        planes.removeValue(forKey: anchor.identifier)
     }
     
 }
