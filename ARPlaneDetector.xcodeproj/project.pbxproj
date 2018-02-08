@@ -15,6 +15,7 @@
 		57FD138B202CD1E600C2AF98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FD1389202CD1E600C2AF98 /* LaunchScreen.storyboard */; };
 		57FD1396202CD1E600C2AF98 /* ARPlaneDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD1395202CD1E600C2AF98 /* ARPlaneDetectorTests.swift */; };
 		57FD13A1202CD1E600C2AF98 /* ARPlaneDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD13A0202CD1E600C2AF98 /* ARPlaneDetectorUITests.swift */; };
+		57FD13AF202CD56900C2AF98 /* ARSceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD13AE202CD56900C2AF98 /* ARSceneManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		57FD139C202CD1E600C2AF98 /* ARPlaneDetectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARPlaneDetectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FD13A0202CD1E600C2AF98 /* ARPlaneDetectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPlaneDetectorUITests.swift; sourceTree = "<group>"; };
 		57FD13A2202CD1E600C2AF98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57FD13AE202CD56900C2AF98 /* ARSceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				57FD137E202CD1E400C2AF98 /* AppDelegate.swift */,
 				57FD1380202CD1E400C2AF98 /* art.scnassets */,
 				57FD1382202CD1E400C2AF98 /* ViewController.swift */,
+				57FD13AE202CD56900C2AF98 /* ARSceneManager.swift */,
 				57FD1384202CD1E400C2AF98 /* Main.storyboard */,
 				57FD1387202CD1E600C2AF98 /* Assets.xcassets */,
 				57FD1389202CD1E600C2AF98 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FD13AF202CD56900C2AF98 /* ARSceneManager.swift in Sources */,
 				57FD1383202CD1E400C2AF98 /* ViewController.swift in Sources */,
 				57FD137F202CD1E400C2AF98 /* AppDelegate.swift in Sources */,
 			);
