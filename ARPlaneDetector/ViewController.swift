@@ -22,6 +22,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneManager.attach(to: sceneView)
         
         sceneManager.displayDegubInfo()
+        
+        /*
+         Prevent the screen from being dimmed after a while as users will likely
+         have long periods of interaction without touching the screen or buttons.
+         */
+        UIApplication.shared.isIdleTimerDisabled = true
     }
 
 }
