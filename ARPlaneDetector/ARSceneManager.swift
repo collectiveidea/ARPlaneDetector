@@ -13,7 +13,7 @@ class ARSceneManager: NSObject {
     
     private var planes = [UUID: Plane]()
     
-    weak var sceneView: ARSCNView?
+    var sceneView: ARSCNView?
     
     func attach(to sceneView: ARSCNView) {
         self.sceneView = sceneView
