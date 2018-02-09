@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5752760D202DF2E4003F7F6A /* GridMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5752760C202DF2E4003F7F6A /* GridMaterial.swift */; };
 		57FD137F202CD1E400C2AF98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD137E202CD1E400C2AF98 /* AppDelegate.swift */; };
 		57FD1381202CD1E400C2AF98 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 57FD1380202CD1E400C2AF98 /* art.scnassets */; };
 		57FD1383202CD1E400C2AF98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD1382202CD1E400C2AF98 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5752760C202DF2E4003F7F6A /* GridMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridMaterial.swift; sourceTree = "<group>"; };
 		57FD137B202CD1E400C2AF98 /* ARPlaneDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPlaneDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FD137E202CD1E400C2AF98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57FD1380202CD1E400C2AF98 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				57FD1382202CD1E400C2AF98 /* ViewController.swift */,
 				57FD13AE202CD56900C2AF98 /* ARSceneManager.swift */,
 				57FD13B0202CED9500C2AF98 /* Plane.swift */,
+				5752760C202DF2E4003F7F6A /* GridMaterial.swift */,
 				57FD1384202CD1E400C2AF98 /* Main.storyboard */,
 				57FD1387202CD1E600C2AF98 /* Assets.xcassets */,
 				57FD1389202CD1E600C2AF98 /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5752760D202DF2E4003F7F6A /* GridMaterial.swift in Sources */,
 				57FD13AF202CD56900C2AF98 /* ARSceneManager.swift in Sources */,
 				57FD1383202CD1E400C2AF98 /* ViewController.swift in Sources */,
 				57FD13B1202CED9500C2AF98 /* Plane.swift in Sources */,
