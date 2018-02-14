@@ -15,25 +15,31 @@ class ARSceneManager: NSObject {
     
     var sceneView: ARSCNView?
     
+    let configuration = ARWorldTrackingConfiguration()
+    
     func attach(to sceneView: ARSCNView) {
         self.sceneView = sceneView
+        self.sceneView?.autoenablesDefaultLighting = true
         
         self.sceneView!.delegate = self
         
-        configureSceneView(self.sceneView!)
-    }
-    
-    private func configureSceneView(_ sceneView: ARSCNView) {
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = [.horizontal, .vertical]
+        startPlaneDetection()
         configuration.isLightEstimationEnabled = true
-        
-        sceneView.session.run(configuration)
     }
     
     func displayDegubInfo() {
         sceneView?.showsStatistics = true
         sceneView?.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+    }
+    
+    func startPlaneDetection() {
+        configuration.planeDetection = [.horizontal, .vertical]
+        sceneView?.session.run(configuration)
+    }
+    
+    func stopPlaneDetection() {
+        configuration.planeDetection = []
+        sceneView?.session.run(configuration)
     }
     
 }
