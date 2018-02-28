@@ -43,7 +43,6 @@ class ViewController: UIViewController {
             
             if let hit = hit.first {
                 placeBlockOnPlaneAt(hit)
-                sceneManager.stopPlaneDetection()
             }
         default:
             print("tapped default")
@@ -91,6 +90,22 @@ class ViewController: UIViewController {
         sceneView?.scene.rootNode.addChildNode(projectile)
         
         projectile.launch(inDirection: impulse)
+    }
+    
+    @IBAction func tappedShowPlanes(_ sender: Any) {
+        sceneManager.showPlanes = true
+    }
+    
+    @IBAction func tappedHidePlanes(_ sender: Any) {
+        sceneManager.showPlanes = false
+    }
+    
+    @IBAction func tappedStop(_ sender: Any) {
+        sceneManager.stopPlaneDetection()
+    }
+    
+    @IBAction func tappedStart(_ sender: Any) {
+        sceneManager.startPlaneDetection()
     }
     
 }

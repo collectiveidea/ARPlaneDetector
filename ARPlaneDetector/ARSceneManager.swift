@@ -15,6 +15,20 @@ class ARSceneManager: NSObject {
     
     var sceneView: ARSCNView?
     
+    var showPlanes: Bool = true {
+        didSet {
+            if showPlanes == false {
+                planes.values.forEach {
+                    $0.runAction(SCNAction.fadeOut(duration: 0.5))
+                }
+            } else {
+                planes.values.forEach {
+                    $0.runAction(SCNAction.fadeIn(duration: 0.5))
+                }
+            }
+        }
+    }
+    
     let configuration = ARWorldTrackingConfiguration()
     
     func attach(to sceneView: ARSCNView) {
@@ -53,6 +67,7 @@ extension ARSceneManager: ARSCNViewDelegate {
         print("Found plane: \(planeAnchor)")
         
         let plane = Plane(anchor: planeAnchor)
+        plane.opacity = showPlanes ? 1 : 0
         
         // store a local reference to the plane
         planes[anchor.identifier] = plane

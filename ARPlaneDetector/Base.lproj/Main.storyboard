@@ -21,20 +21,56 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cY-4R-yM9">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V0-lv-igf">
-                                <rect key="frame" x="164" y="592" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V0-lv-igf">
+                                <rect key="frame" x="155" y="563" width="65" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="a55-de-Nxq"/>
+                                    <constraint firstAttribute="width" constant="65" id="yeY-1y-lsC"/>
+                                </constraints>
+                                <state key="normal" title="Shoot"/>
                                 <connections>
                                     <action selector="tappedShoot:" destination="BV1-FR-VrT" eventType="touchUpInside" id="OGK-Lh-WyZ"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfe-lJ-hT2">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="N5I-Kt-eop"/>
+                                    <barButtonItem title="Show planes" id="frH-iH-INF">
+                                        <connections>
+                                            <action selector="tappedShowPlanes:" destination="BV1-FR-VrT" id="vbP-Oz-FH5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Hide planes" id="XLF-x0-eUL">
+                                        <connections>
+                                            <action selector="tappedHidePlanes:" destination="BV1-FR-VrT" id="AWc-83-7wE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Stop" id="6pU-v3-06z">
+                                        <connections>
+                                            <action selector="tappedStop:" destination="BV1-FR-VrT" id="O4b-Tm-EDX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Start" id="Wfm-Gl-ftv">
+                                        <connections>
+                                            <action selector="tappedStart:" destination="BV1-FR-VrT" id="iUU-Yv-o0Y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="r4N-P3-XtC"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="gfe-lJ-hT2" firstAttribute="top" secondItem="0V0-lv-igf" secondAttribute="bottom" constant="16" id="OiB-Yd-cQP"/>
                             <constraint firstItem="fyn-96-zZG" firstAttribute="bottom" secondItem="0cY-4R-yM9" secondAttribute="bottom" id="P2x-wI-vGz"/>
                             <constraint firstItem="0cY-4R-yM9" firstAttribute="leading" secondItem="fyn-96-zZG" secondAttribute="leading" id="ScR-uD-jQW"/>
+                            <constraint firstItem="fyn-96-zZG" firstAttribute="trailing" secondItem="gfe-lJ-hT2" secondAttribute="trailing" id="Tlk-RG-bpu"/>
+                            <constraint firstItem="fyn-96-zZG" firstAttribute="bottom" secondItem="gfe-lJ-hT2" secondAttribute="bottom" id="YfQ-yo-ZK2"/>
                             <constraint firstItem="0cY-4R-yM9" firstAttribute="top" secondItem="fyn-96-zZG" secondAttribute="top" id="Zk6-zP-m0r"/>
+                            <constraint firstItem="0V0-lv-igf" firstAttribute="centerX" secondItem="fyn-96-zZG" secondAttribute="centerX" id="gYU-Er-tp2"/>
+                            <constraint firstItem="gfe-lJ-hT2" firstAttribute="leading" secondItem="fyn-96-zZG" secondAttribute="leading" id="ihZ-5K-K43"/>
                             <constraint firstItem="fyn-96-zZG" firstAttribute="trailing" secondItem="0cY-4R-yM9" secondAttribute="trailing" id="pFK-lS-Jom"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fyn-96-zZG"/>
