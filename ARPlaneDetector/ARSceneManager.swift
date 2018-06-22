@@ -39,6 +39,8 @@ class ARSceneManager: NSObject {
         
         startPlaneDetection()
         configuration.isLightEstimationEnabled = true
+        
+        sceneView.scene.physicsWorld.gravity = SCNVector3(0, -3.0, 0)
     }
     
     func displayDegubInfo() {

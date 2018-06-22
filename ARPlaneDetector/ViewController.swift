@@ -59,6 +59,7 @@ class ViewController: UIViewController {
     private func createBox() -> SCNNode {
         let box = SCNBox(width: 0.15, height: 0.20, length: 0.02, chamferRadius: 0.02)
         let boxNode = SCNNode(geometry: box)
+        boxNode.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(geometry: box, options: nil))
         
         return boxNode
     }
@@ -82,7 +83,7 @@ class ViewController: UIViewController {
         
         projectile.simdTransform = matrix_multiply(camera.transform, translation)
         
-        let force = simd_make_float4(-3, 0, -8, 0)
+        let force = simd_make_float4(-1, 0, -3, 0)
         let rotatedForce = simd_mul(camera.transform, force)
         
         let impulse = SCNVector3(rotatedForce.x, rotatedForce.y, rotatedForce.z)
